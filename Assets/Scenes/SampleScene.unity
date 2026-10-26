@@ -256,6 +256,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162443046}
   m_CullTransparentMesh: 1
+--- !u!1 &260371842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260371843}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &260371843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260371842}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8, y: -0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 283758213}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &283758210
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,8 +299,9 @@ GameObject:
   - component: {fileID: 283758212}
   - component: {fileID: 283758211}
   - component: {fileID: 283758216}
-  - component: {fileID: 283758217}
   - component: {fileID: 283758218}
+  - component: {fileID: 283758217}
+  - component: {fileID: 283758219}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -370,7 +402,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 260371843}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &283758216
@@ -399,7 +432,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &283758217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,6 +502,21 @@ PolygonCollider2D:
       - {x: 0.6775425, y: 0.07679471}
       - {x: 0.72457844, y: -0.691442}
   m_UseDelaunayMesh: 1
+--- !u!114 &283758219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283758210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e14022c5b70da4b998db3b23fc237a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShooter
+  projectilePrefab: {fileID: 1502967976636575347, guid: 52aa8066e8896b143905fdd8b822df2c, type: 3}
+  firePoint: {fileID: 260371843}
+  fireRate: 0.5
 --- !u!1 &367600896
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,10 +866,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawn
   prefab: {fileID: 1333690915838491056, guid: b7378578ab75fc5488e7627e8a87fa14, type: 3}
   spawnRate: 2
-  speed: 3
+  speed: 5
   destructionLimitX: -12
   limitX: 12
-  limitY: 3
+  limitY: 3.5
 --- !u!4 &575667321
 Transform:
   m_ObjectHideFlags: 0

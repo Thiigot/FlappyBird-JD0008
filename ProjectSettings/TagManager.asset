@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Score
   - Ground
+  - Projectile
+  - Baloon
   layers:
   - Default
   - TransparentFX
