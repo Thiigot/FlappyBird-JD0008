@@ -22,10 +22,6 @@ public class ObstacleHealth : MonoBehaviour
 
         currentHP = Mathf.Max(currentHP, 0);
 
-        Debug.Log(
-            $"{gameObject.name}: HP = {currentHP}/{maxHP}"
-        );
-
         if (currentHP <= 0)
         {
             Die();

@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Projectile
   - Baloon
+  - Boss
   layers:
   - Default
   - TransparentFX

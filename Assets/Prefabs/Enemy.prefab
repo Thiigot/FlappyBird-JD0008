@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bbecdbc45b8a24e995e141e5be1187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleHealth
-  maxHP: 3
+  maxHP: 1
 --- !u!1 &1840711357321477890
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,8 +156,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1108233306275244776}
+  m_Children: []
   m_Father: {fileID: 6527512217999455875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1979425014674307390
@@ -293,76 +292,15 @@ PolygonCollider2D:
       - {x: -0.4889549, y: -1.557637}
       - {x: 0.43644288, y: -1.2278324}
       - {x: 0.57535666, y: -0.8281308}
-      - {x: 0.4882823, y: -0.38129693}
-      - {x: 0.13575777, y: -0.31635916}
+      - {x: 0.4612917, y: -0.37230006}
+      - {x: 0.4780788, y: 0.42676395}
+      - {x: 0.842029, y: 0.6041172}
+      - {x: 0.82259154, y: 1.0481125}
+      - {x: 0.628194, y: 1.4064667}
+      - {x: 0.22964591, y: 1.5436902}
+      - {x: -0.035172522, y: 1.0619984}
+      - {x: -0.05058922, y: 0.6639578}
+      - {x: 0.25526792, y: 0.41298434}
+      - {x: 0.32182315, y: -0.2652469}
       - {x: -0.2828605, y: -0.5172488}
   m_UseDelaunayMesh: 1
---- !u!1 &4285151237456029187
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1108233306275244776}
-  - component: {fileID: 1457484649826919927}
-  m_Layer: 0
-  m_Name: Baloon
-  m_TagString: Baloon
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1108233306275244776
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4285151237456029187}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2831639369553313349}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &1457484649826919927
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4285151237456029187}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.37612775, y: 0.9347423}
-  m_Size: {x: 0.6577291, y: 0.95922196}
-  m_Direction: 0

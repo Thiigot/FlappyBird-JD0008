@@ -3,7 +3,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float speed = 12f;
-    [SerializeField] private float lifetime = 3f;
+    [SerializeField] private float lifetime = 1f;
     [SerializeField] private int damage = 1;
 
     private Rigidbody2D rb;
@@ -31,15 +31,20 @@ public class Projectile : MonoBehaviour
             {
                 obstacle.TakeDamage(damage);
             }
+            Destroy(gameObject);
         }
-        if (other.CompareTag("Baloon"))
+        else if (other.CompareTag("Boss"))
         {
-            ObstacleHealth obstacle = other.GetComponentInParent<ObstacleHealth>();
-            if (obstacle != null)
+            BossHealth boss = other.GetComponent<BossHealth>();
+            if(boss == null)
             {
-                obstacle.TakeDamage(damage*10);
+                Debug.Log("Null!");
             }
+            if (boss != null)
+            {
+                boss.TakeDamage(damage);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }

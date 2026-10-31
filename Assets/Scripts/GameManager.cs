@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour
 {
     
     [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text BossHPText;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject gameWinPanel;
     [SerializeField] private GameObject pausePanel;
+    [SerializeField] private BossSpawn bossSpawner;
 
     private bool isPaused = false;
     private bool isGameOver = false;
@@ -23,6 +26,10 @@ public class GameManager : MonoBehaviour
             Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             TogglePause();
+        }
+        if (bossSpawner.bossSpawned)
+        {
+            UpdateHPUI();
         }
     }
     public void TogglePause()
@@ -73,6 +80,18 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void GameWin()
+    {
+        if (isGameOver || hasWon)
+            return;
+        hasWon = true;
+
+        if (gameWinPanel != null)
+            gameWinPanel.SetActive(true);
+
+        Time.timeScale = 0f;
+    }
+
     public void RestartGame()
     {
         Time.timeScale = 1f;
@@ -87,18 +106,24 @@ public class GameManager : MonoBehaviour
     #region points
     public void PointUP()
     {
-        if (isGameOver || hasWon)
+        if (isGameOver || hasWon || bossSpawner.bossSpawned)
             return;
 
         score++;
         UpdateScoreUI();
+        bossSpawner.CheckBossSpawn(score);
     }
     private void UpdateScoreUI()
     {
         if (scoreText != null)
             scoreText.text = score.ToString();
     }
-    #endregion
+    #endregion    
 
-    
+    public void UpdateHPUI()
+    {
+        BossHealth bossHp= FindAnyObjectByType<BossHealth>();
+        if (BossHPText != null)
+            BossHPText.text = "BOSS HP: " + bossHp.currentHP.ToString();
+    }
 }
