@@ -1043,7 +1043,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 598916968}
   stopPoint: {fileID: 1650148209}
   player: {fileID: 283758213}
-  bossSpawnScore: 10
+  bossSpawnScore: 5
   bossSpawned: 0
 --- !u!1 &577839595
 GameObject:
