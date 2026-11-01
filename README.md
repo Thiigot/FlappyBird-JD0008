@@ -11,11 +11,11 @@ Felpudo e Fofuxa is a mini-project developed using Unity and C#, designed to pra
 
 ## KeyBinds
 
-| Ação | Tecla |
+| Action | Bind |
 |---|---|
-| Pular | Space |
-| Atirar | Left Mouse |
-| Pausar | Esc |
+| Jump | Space |
+| Shoot | Left Mouse |
+| Pause | Esc |
 
 ![GameOver](Assets/Midia/GAMEOVER.gif)
 
