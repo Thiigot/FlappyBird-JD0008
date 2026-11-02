@@ -1,7 +1,7 @@
 # Felpudo e Fofuxa - Flappy Bird
 ## [!IMPORTANT] Unity Version: 6000.3.7f1
 >  Digital games students Brenda Santos Pinheiro and Thiago Lopes, from UNEB, set out to create a minigame for their Game Programming course.
-> [Game demonstration Video.](https://youtu.be/awM6dHQyho4)
+> [Game demonstration Video](https://youtu.be/awM6dHQyho4) and [Play Unity Link.](https://play.unity.com/en/games/8d7c3c29-7f87-4ad2-bd6b-c23821a15742/build)
 
 ![Win](Assets/Midia/BOSS.gif)
 
